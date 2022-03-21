@@ -1,0 +1,68 @@
+<!-- <p>{{ id }}</p>
+<p>{{ name }}</p>
+<p>{{ user_id }}</p>
+<p>{{ slug }}</p>
+<p>{{ activity }}</p>
+<p>{{ status }}</p>
+<p>{{ created_at }}</p>
+<p>{{ updated_at }}</p>
+<p>{{ deleted_at }}</p> -->
+
+<div id="app">
+	<header>
+		<h1>Jifi ToDo App</h1>
+		<form (ngSubmit)="addTask(f)" #f="ngForm" action="#" method="post" class="add-todo">
+            <div class="form-group">
+                <input type="text" name="name" placeholder="What is your mission?" ngModel>
+            </div>
+            
+            <div class="form-group">
+                <textarea name="activity" cols="5" rows="3" ngModel></textarea>
+            </div>
+
+            <div class="form-group">
+                <input type="datetime-local" name="date" ngModel>
+            </div>
+
+		    <div class="form-group button-add">
+                <button type="submit">+ Add</button>
+            </div>
+        </form>
+	</header>
+
+	<div id="wrapper">
+		<!--List of uncompleted tasks -->
+		<ul class="tasks">
+			<!-- <li *[ngIf]="todo.status ==="> -->
+            <li *ngFor="let task of tasks">
+                <div class="tasks-content">
+                    <span class="taks-name">{{ task.name }}</span>
+                    <span class="taks-activity">{{ task.activity }}</span>
+                </div>
+
+                <div class="tasks-date">{{ task.date }}</div>
+
+				<div class="actions">
+					<form (ngSubmit)="completedTask(fc)" #fc="ngForm" action="#" method="post">
+                        <input type="hidden" name="id" value="{{ task.id }}">
+                        <button type="submit" class="complete">
+                            <img src="/assets/tick.png" alt="">
+                        </button>
+                    </form>
+
+                    <form (ngSubmit)="completedTask(fd)" #fd="ngForm" action="#" method="post">
+                        <input type="hidden" name="id" value="{{ task.id }}">
+                        <button class="delete">
+                            <img src="/assets/delete.png" alt="">
+                        </button>
+                    </form>
+				</div>
+			</li>
+		</ul>
+	</div>
+
+	<!-- Footer -->
+	<footer>
+        <h2>Poductivity: {{ poductivity }}</h2>
+    </footer>
+</div>

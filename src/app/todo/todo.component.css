@@ -1,0 +1,161 @@
+#app {
+	min-width: 200px;
+	width: 400px;
+	max-width: 600px;
+	margin-left: auto;
+	margin-right: auto;
+    margin-top: 50px;
+}
+
+/**
+ * Header
+ */
+#app header {
+	padding: 15px;
+    width: 100%;
+	background-color: #505c87;
+	color: white;
+	border-top-right-radius: 10px;
+	border-top-left-radius: 10px;
+	border-bottom: 5px solid #97a6c0;
+}
+
+#app header h1 {
+    font-size: 30px;
+}
+
+#app header .add-todo input,
+#app header .add-todo textarea {
+    display: block;
+	font-size: 15px;
+    border: 2px solid #fff;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+	width: 100%;
+    padding: 5px 10px;
+    margin-bottom: 15px;
+    outline: none;
+}
+
+#app header .add-todo input:focus,
+#app header .add-todo textarea:focus {
+    border-color: #70c366;
+}
+
+#app header .add-todo .button-add {
+	display: flex;
+    justify-content: end;
+}
+
+#app header .add-todo .button-add button {
+    padding: 5px 20px;
+    border: 2px solid #70c366;
+    background-color: #70c366;
+	color: #fff;
+	font-size: 15px;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+#app header .add-todo .button-add button:hover {
+    background-color: #fff;
+    color:#70c366;
+}
+
+/**
+ * Wrapper
+ */
+#app #wrapper{
+	width: 100%;
+	border-left: 5px solid #f9f9f9;
+	border-right: 5px solid #f9f9f9;
+}
+
+/**
+ * Tasks
+ */
+#app .tasks {
+	list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#app .tasks li {
+	width: 100%;
+	min-height: 50px;
+	padding: 5px 15px;
+	border-bottom: 1px solid #e6e6e6;
+	color: #444;
+}
+
+#app .tasks li .tasks-content .taks-name {
+	display: block;
+    font-size: 15px;
+	line-height: 30px;
+}
+
+#app .tasks li .tasks-content .taks-activity {
+	display: block;
+    font-size: 12px;
+    margin-left: 10px;
+    color: #ccc;
+}
+
+#app .tasks li .tasks-date {
+    text-align: center;
+    font-size: 10px;
+    margin: 5px 0;
+    color: blue;
+}
+
+#app .tasks .actions {
+	display: flex;
+    justify-content: space-between;
+    margin: 5px 0;
+}
+
+#app .tasks .actions button {
+	border:none;
+	background-color: white;
+}
+
+#app .tasks .actions button img {
+	height: 20px;
+}
+
+#app .tasks .actions button:hover {
+    transform: scale(1.1);
+}
+
+#app .tasks .actions button.delete {}
+
+#app .tasks .actions button.complete {
+	border-radius: 15px;
+}
+
+/* #ready{
+	text-decoration: line-through;
+}
+#ready button.complete{
+	background-color: #9bd488;
+} */
+
+/**
+ * Footer
+ */
+footer {
+	height: 50px;
+	width: 100%;
+	background-color: #505c87;
+	border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+}
+
+footer  h2 {
+	color: #fff;
+    font-size: 13px;
+    text-align: center;
+    line-height: 50px;
+    margin: 0;
+    padding: 0;
+}
